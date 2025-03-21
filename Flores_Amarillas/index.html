@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <audio id="audio" src="sound/Interlude.mp3"></audio>
+
+<script>
+    window.addEventListener('load', () => {
+        const audio = document.getElementById('audio');
+
+        // Intentar reproducir directamente
+        audio.play().catch(() => {
+            // Crear un botón visible con el texto "Presióname"
+            const hiddenButton = document.createElement('button');
+            hiddenButton.textContent = 'Presióname';  // Texto correcto
+            hiddenButton.style.display = 'block';      // Mostrar el botón
+            hiddenButton.style.padding = '2px 5px';
+            hiddenButton.style.marginTop = '20px';
+            hiddenButton.style.fontSize = '10px';
+            hiddenButton.style.borderRadius = '20px';
+            hiddenButton.style.cursor = 'pointer';
+
+            document.body.appendChild(hiddenButton);
+
+            hiddenButton.addEventListener('click', () => {
+                audio.play();
+                hiddenButton.style.display = 'none'; // Ocultar el botón tras la reproducción
+            });
+        });
+    });
+</script>
+    
+
+        <div class="greetings">
+        <span>H</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>O</span>
+        <span>S</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+        <span>A</span>
+    </div>
+    
+    <div class="description">
+        <span>Hola mi rayito de sol, soy yo de nuevo, espero que te guste este detallito</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="margin: 20px; background-color: rgb(255, 0, 0); color: #ffbaba;">Continuar</a>
+        </button>
+    </div>
+
+</body>
+
+
+</html>
